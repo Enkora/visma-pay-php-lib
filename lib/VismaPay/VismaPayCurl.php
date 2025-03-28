@@ -7,7 +7,7 @@ class VismaPayCurl implements VismaPayConnector
 	public function request($url, $post_arr)
 	{
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, VismaPay::API_URL . "/" . $url);
+		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
