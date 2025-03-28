@@ -76,7 +76,7 @@ if(isset($_GET['action']))
 				{
 					header('Cache-Control: no-cache');
 					echo json_encode(array(
-						'url' => $vismaPay::API_URL . '/token/' . $result->token
+						'url' => $vismaPay::$api_url . '/token/' . $result->token
 					));
 				}
 				else if($method === 'embedded')
@@ -87,7 +87,7 @@ if(isset($_GET['action']))
 				}
 				else
 				{
-					header('Location: ' . $vismaPay::API_URL . '/token/' . $result->token);
+					header('Location: ' . $vismaPay::$api_url . '/token/' . $result->token);
 				}
 			}
 			else
