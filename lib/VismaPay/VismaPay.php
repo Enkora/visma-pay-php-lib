@@ -16,7 +16,7 @@ class VismaPay
 	protected $refund = array();
 	protected $initiator = array();
 
-	public $api_url = 'https://www.vismapay.com/pbwapi';
+	public static $api_url = 'https://www.vismapay.com/pbwapi';
 
 	public function __construct($api_key, $private_key, $version = 'w3.2', $connector = null)
 	{
